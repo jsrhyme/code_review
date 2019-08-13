@@ -35,7 +35,7 @@ public class SplitArray {
    * using any additional data structure.
    */
   public void splitSorting(int[] array) {
-    if (array==null) {
+    if (array == null) {
       return;
     }
 	
@@ -59,7 +59,7 @@ public class SplitArray {
    * data structure here as well.
    */
   public void splitSwappingIterative(int[] array) {
-    if (array==null) {
+    if (array == null) {
         return;
     }
 
@@ -89,7 +89,7 @@ public class SplitArray {
    * Its called Hoare's Partitioning Algorithm
    */
   public void splitSwappingPartition(int[] array) {
-    if (array==null) {
+    if (array == null) {
       return;
     }
     
@@ -118,7 +118,7 @@ public class SplitArray {
    * structure.
    */
   public void splitSwappingRecursive(int[] array) {
-    if (array==null || array.length == 0) {
+    if (array == null || array.length == 0) {
     	return;
     }
 
@@ -126,7 +126,7 @@ public class SplitArray {
   }
 
   private void splitSwappingRecursiveInner(int[] array, int left, int right) {
-    if (array==null) {
+    if (array == null) {
       return;
     }
 
@@ -150,7 +150,7 @@ public class SplitArray {
   }
 
   private void swap(int[] array, int left, int right) {
-    if (array==null) {
+    if (array == null) {
       return;
     }
 
