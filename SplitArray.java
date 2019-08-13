@@ -130,19 +130,21 @@ public class SplitArray {
       return;
     }
 
-    if (left < right) {
-      boolean shouldChangeLeft = array[left] >= 0;
-      boolean shouldChangeRight = array[right] < 0;
-      if (shouldChangeLeft && shouldChangeRight) {
-        swap(array, left, right);
-        splitSwappingRecursiveInner(array, left + 1, right - 1);
-      } else {
-        if (!shouldChangeLeft) {
-          splitSwappingRecursiveInner(array, left + 1, right);
-        }
-        else if (!shouldChangeRight) {
-          splitSwappingRecursiveInner(array, left, right - 1);
-        }
+    if (left >= right) {
+      return;
+    }
+    
+    boolean shouldChangeLeft = array[left] >= 0;
+    boolean shouldChangeRight = array[right] < 0;
+    if (shouldChangeLeft && shouldChangeRight) {
+      swap(array, left, right);
+      splitSwappingRecursiveInner(array, left + 1, right - 1);
+    } else {
+      if (!shouldChangeLeft) {
+        splitSwappingRecursiveInner(array, left + 1, right);
+      }
+      else if (!shouldChangeRight) {
+        splitSwappingRecursiveInner(array, left, right - 1);
       }
     }
   }
